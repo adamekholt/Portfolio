@@ -4,23 +4,26 @@
     margin: 0;
     --BACKGROUND-COLOR-ONE: #000000;
     --BACKGROUND-COLOR-TWO: #FF6123;
-    --CONTRAST-COLOR:#FF6123;
-    --TEXT-COLOR-DARK:#000000;
-    --TEXT-COLOR-LIGHT:#FFFFFF;
+    --TEXT-COLOR-ONE:#000000;
+    --TEXT-COLOR-TWO:#FF6123;
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     background-color: var(--BACKGROUND-COLOR-ONE);
+    color: var(--TEXT-COLOR-TWO);
+    row-gap: 2rem;
 }
 
 a {
-    color: var(--TEXT-COLOR-DARK);
+    color: var(--TEXT-COLOR-ONE);
     text-decoration: none;
 }
 
 h1 { /*overskrift på hver side*/
     font-family: "Anton", sans-serif;
-    color: var(--CONTRAST-COLOR);
     font-size: 160px;
     font-style: normal;
     font-weight: 400;
@@ -28,7 +31,6 @@ h1 { /*overskrift på hver side*/
 
 h2 { /*overskrift på hver side*/
     font-family: "Anton", sans-serif;
-    color: var(--CONTRAST-COLOR);
     font-size: 100px;
     font-style: normal;
     font-weight: 400;
@@ -49,14 +51,52 @@ p { /*brødtekst*/
 }
 
 nav { /*tekst*/
+    display: flex;
+    position: fixed; /*NB! vet ikke om jeg vil at den skal være der hele tiden eller ikke, vil helst ikke at den skal ha en egen bakgrunn. */
+    align-items: center;
     background-color: var(--BACKGROUND-COLOR-TWO);
+    color: var(--TEXT-COLOR-ONE);
     font-family: "Inter", sans-serif;
     font-size: 16.108px;
     font-style: normal;
     font-weight: 500;
     width: 100%;
-    height: 4rem;
-    flex-shrink: 0;
-    padding: 1rem;
 }
 
+nav p {
+    margin-right: auto;
+    padding: 10px;
+}
+
+nav a {
+    justify-items: flex-end; 
+    padding: 0.5rem;
+}
+
+section {
+    width: 100%;
+}
+
+#about-section {
+    display: grid;
+    grid-template-areas: (1, 2fr);
+    background-color:var(--BACKGROUND-COLOR-TWO);
+    color: var(--TEXT-COLOR-ONE);
+}
+
+#education-section {
+    background-color: var(--BACKGROUND-COLOR-ONE);
+}
+#projects-section {
+    background-color:var(--BACKGROUND-COLOR-TWO);
+    color: var(--TEXT-COLOR-ONE);
+}
+#contact-section {
+    background-color:var(--BACKGROUND-COLOR-ONE);
+}
+
+@media (max-width: 575px) { /*dette er ikke klart, burde vurdere frre linker eller en hamburgermeny*/
+    nav a {
+        display: none;
+    }
+}
