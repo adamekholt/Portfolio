@@ -61,6 +61,7 @@ nav { /*tekst*/
     font-style: normal;
     font-weight: 500;
     width: 100%;
+    padding: 0.8rem;
 }
 
 nav p {
@@ -73,13 +74,16 @@ nav a {
     padding: 0.5rem;
 }
 
+li {
+    list-style: none;
+}
+
 section {
     width: 100%;
+    padding: 2rem;
 }
 
 #about-section {
-    display: grid;
-    grid-template-areas: (1, 2fr);
     background-color:var(--BACKGROUND-COLOR-TWO);
     color: var(--TEXT-COLOR-ONE);
 }
