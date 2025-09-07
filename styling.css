@@ -13,9 +13,10 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    column-gap: 10px;
     background-color: var(--BACKGROUND-COLOR-ONE);
     color: var(--TEXT-COLOR-TWO);
-    flex-wrap: wrap;
+
 }
 
 a {
@@ -61,14 +62,14 @@ section {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    padding: 1rem;
+    padding: 3rem;
 }
 
 /*navbar*/
 
-nav { /*tekst*/
+nav {
     display: flex;
-    position: fixed; /*NB! vet ikke om jeg vil at den skal være der hele tiden eller ikke, vil helst ikke at den skal ha en egen bakgrunn. */
+    position: static; /*NB! vet ikke om jeg vil at den skal være der hele tiden eller ikke, vil helst ikke at den skal ha en egen bakgrunn. */
     align-items: center;
     background-color: var(--BACKGROUND-COLOR-ONE);
     color: var(--TEXT-COLOR-TWO);
@@ -91,33 +92,40 @@ nav a {
     padding: 0.5rem;
 }
 
-/*landing-section*/
-
 #landing-section {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 20% 1fr;
     height: 100vh;
-    overflow: hidden;
+    max-width: 100%;
+
 }
 
 #landing-section h1{ 
-    position: relative;
+    display: inline-grid;
+    grid-column: 2 ;
+    grid-row: 1 ;
     text-align: center;
-    margin: 0;
-    z-index: 2;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
     white-space: nowrap;
 }
 
-#landing-section img {
-    position: absolute;
-    top: 10%;
-    left: 5%;
-    max-height: 50vh;
-    border-radius: 10rem;
-    border: solid 5px var(--BACKGROUND-COLOR-TWO);  
+#landing-section #img-1 {
+    display: inline-grid;
+    grid-column: 3 / 4;
+    grid-row: 2;
+    max-width: 80%;
+    align-self:flex-end;
+    padding-bottom: 4rem;
+}
+
+#landing-section #img-2 {
+    display: inline-grid;
+    grid-column: 1;
+    grid-row:  1;
+    max-height: 500px;
 }
 
 /*about-section*/
@@ -147,12 +155,18 @@ nav a {
 }
 
 /*media*/
-@media (max-width: 700px) { /*dette er ikke klart, burde vurdere færre linker eller en hamburgermeny*/
+
+@media (max-width: 700px) { dette er ikke klart, burde vurdere færre linker eller en hamburgermeny
     nav a {
         display: none;
     }
+}
 
-    /* #landing-section img {
+@media (max-width: 1000px) { 
+    #landing-section #img-1 {
         display: none;
-    } */
+    }
+    #landing-section #img-2 {
+    display: none;
+    }
 }
