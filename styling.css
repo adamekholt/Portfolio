@@ -16,7 +16,6 @@ body {
     column-gap: 10px;
     background-color: var(--BACKGROUND-COLOR-ONE);
     color: var(--TEXT-COLOR-TWO);
-
 } 
 
 a {
@@ -47,7 +46,7 @@ h3 { /*overskrift til hvert prosjekt*/
     font-weight: 500;
 }
 
-p { /*brødtekst*/
+p, label { /*brødtekst*/
     font-family: "Inter", sans-serif;
     font-size: 16.24px;
     font-style: normal;
@@ -63,6 +62,34 @@ section {
     flex-direction: column;
     height: 100vh;
     padding: 3rem;
+}
+
+button {
+    font-family: "Inter", sans-serif;
+    font-size: 16.24px;
+    font-style: normal;
+    font-weight: 600;
+    background-color: var(--BACKGROUND-COLOR-TWO);
+    width: 20rem;
+    height: 3rem;
+    border-radius: 10px;
+    color: var(--TEXT-COLOR-ONE);
+    border-style: none;
+}
+
+input, textarea {
+    border-style: none;
+    width: 20rem;
+    height: 2rem;
+    border-radius: 10px;
+    color: var(--TEXT-COLOR-ONE);
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+}
+
+textarea {
+    width: 20rem;
+    height: 10rem;
 }
 
 /*navbar*/
@@ -149,6 +176,7 @@ nav a {
 
 .text-container h1{
     line-height: 0.9;
+    white-space: wrap;
 }
 
 #about-section img {
@@ -174,7 +202,14 @@ nav a {
 /*contact-section*/
 
 #contact-section {
+    display: flex;
+    flex-direction: column;
     background-color:var(--BACKGROUND-COLOR-ONE);
+}
+
+#contact-section form {
+    justify-items: center;
+
 }
 
 /*media*/
@@ -202,7 +237,6 @@ nav a {
         grid-row: 2;
         grid-column: 2;
         align-self: center;
-        
     }
 }
 @media (max-width: 1200px) {
