@@ -9,7 +9,7 @@
     --TEXT-COLOR-TWO:#FF6123;
 }
 
-body {
+body { 
     display: flex;
     justify-content: center;
     flex-direction: column;
