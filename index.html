@@ -57,12 +57,18 @@
         </h1>
         <form class="contact-form">
             <ul>
-                <li><label id="name">Name:</label></li>
-                <li><input type="text" for="name" required></li>
-                <li><label id="email">Email:</label></li>
-                <li><input type="email" for="email" required></li>
-                <li><label id="message">Message:</label></li>
-                <li><textarea for="message" required></textarea></li>
+                <li id="name-input">
+                    <label id="name">Name:</label>
+                    <input type="text" for="name" required>
+                </li>
+                <li id="email-input">
+                    <label id="email">Email:</label>
+                    <input type="email" for="email" required>
+                </li>
+                <li id="text-box">
+                    <label id="message">Message:</label>
+                    <textarea for="message" required></textarea>
+                </li>
                 <button type='submit'>Send</button>
             </ul>
         </form>
