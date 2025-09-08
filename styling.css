@@ -187,10 +187,32 @@ nav a {
     width: 100%; 
  }
 
-/*education-section*/
+/*skills-section*/
 
-#education-section {
-    background-color: var(--BACKGROUND-COLOR-ONE);
+.tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 10rem;
+    max-height: 100%;
+}
+
+.tools-container div {
+    height: 5rem;
+    width: auto;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tools-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#black-icon{
+    background-color: #ffffff; 
+    max-height: 100%;
 }
 
 /*projects-section*/
@@ -206,7 +228,6 @@ nav a {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: auto auto;
-    background-color:var(--BACKGROUND-COLOR-ONE);
 }
 
 form {
