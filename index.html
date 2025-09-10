@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
@@ -13,34 +14,104 @@
         <nav>
             <p>Adam Ekholt</p>
             <a href="#about-section">About me</a>
-            <a href="#education-section">Tools</a>
+            <a href="#skills-section">Skills</a>
             <a href="#projects-section">Projects</a> 
             <a href="#contact-section">Contact</a>            
-            <a href="https://www.github.com/adamekholt">!!</a> <!--Få inn et github icon her-->
-            <a href="https://www.linkedin.com/in/adamekholt/">$$</a> <!--Få inn et Linkedin icon her-->
+            <a href="https://www.github.com/adamekholt" target="_blank">
+                <i class="fa-brands fa-github fa-lg"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/adamekholt/" target="_blank">
+                <i class="fa-brands fa-linkedin fa-lg"></i>
+            </a>
         </nav>
     </header>
-    <section id="about-section">
-        <h1>About me</h1>
-        <p>This is the content of the about section.</p>
+    <section id="landing-section"> 
+        <img class="img-1" src="/images/Group 628.svg" alt="self portrait">
+        <img class="img-2" src="/images/image.png" alt="self portrait">
+        <h1>
+            I´m Adam, your<br>
+            new Front-end <br>
+            developer
+        </h1> 
     </section>
-    <section id="education-section">
-        <h1>Education</h1>
-        <ul>
+    <section id="about-section"> <!--HUSKHUSKHUSK skift section id til class(?)-->
+        <img class="img-1" src="/images/465ba9f57a324d2fa1530c6db0e513af.jpg" alt="bildeinfo">  
+        <div class="text-container">
+            <h1>who?</h1>
+            <p> Jeg er en 32 år gammel kar som er født på ny(vil jeg si), og lever sitt beste liv sammen med kone og hund på Nesodden. Siden jeg begynte å jobbe, har jeg jobbet med barn. Så, hva fikk meg inn i verden av webutvikling? Jeg giftet meg inn i en tech-familie, og det åpnet opp en helt ny måte å tenke på (jeg hadde nemlig levd litt under en stein en stund). Jeg har lenge tenkt at dersom jeg ønsker å gjøre en forskjell, må jeg være der menneskene er, og skape noe som kan bidra til ekte menneskelig samhandling. Nettopp derfor har «teknologirevolusjonen» skremt meg litt, fordi den kan bidra til at vi blir mindre tilstedeværende og mer distanserte fra hverandre som mennesker.</p><br>
+            <p>Derfor har jeg startet på en ny misjon, med et mål om å lage verdifulle verktøy som lar oss beholde ferdighetene våre og ikke mister det menneskelige underveis. Tenker jeg vil si at det gjør at selvom jeg ikke er med på å gjøre en forskjell, så er jeg med på å gjøre forskjellen positiv!</p><br>
+            <p>Akkurat nå jobber jeg med et prosjekt hvor ideen min er å lage en kartapplikasjon som kombinerer de digitale funksjonene vi er vant til, men samtidig hjelper folk å lære å lese kart og navigere i norsk natur, uten internettdekning.</p><br>
+            <p>Når jeg ikke sitter inne å jobber med misjonsarbeidet mitt (og studier), elsker jeg å være ute på tur. Jeg og familien min drar gjerne på turer i skog og mark, eller legger ut på roadtrips. Hjemme tilbringer jeg mye tid med den akustiske gitaren min og små trearbeidsprosjekter. Selv om jeg ikke lager store fruktboller enda, er jeg på vei dit, én skeiv teskje av gangen.</p>
+        </div>
+        </section>
+    <section id="skills-section">    
+        <h1>Skills</h1>  
+        <div class="tools-container">
+            <div class="item">
+                <!-- <label for="html-icon">HTML</label> -->
+                <img id="html-icon" src="/images/html-5-svgrepo-com.svg" alt="html logo">
+            </div>
+            <div class="item">
+                <!-- <label id="css-icon">CSS</label> -->
+                <img src="/images/css3-svgrepo-com.svg" alt="css logo">
+            </div>
+            <div class="item">
+                <!-- <label id="js-icon">Javascript</label> -->
+                <img src="/images/javascript-logo-svgrepo-com.svg" alt="js logo">
+            </div>
+            <div class="item">
+                <!-- <label id="react-icon">React.js</label> -->
+                <img src="/images/react-svgrepo-com.svg" alt="react.js logo">
+            </div>
+            <div class="item">
+                <!-- <label id="node-icon">Node.js</label> -->
+                <img src="/images/node-js-svgrepo-com.svg" alt="node.js logo">
+            </div>
+            <div class="item">
+                <img src="/images/rest-api-svgrepo-com.svg" id="black-icon" alt="restapi logo">
+            </div>
+            <div class="item">
+                <img src="/images/github-142-svgrepo-com.svg" id="black-icon" alt="github logo">
+            </div>
+            <div class="item">
+                <img src="/images/mongodb-svgrepo-com (1).svg"  alt="mongodb logo">
+            </div>
+        </div> 
+
     </section>
     <section id="projects-section">
         <h1>Projects</h1>
-        <p>This is the content of the about section.</p>
+        <ul>
+            <li>
+                <!--Hvert liste element skal inneholde en h3, en p, 1-2 linker til github og eller netlify, bilde-->
+            </li>
+        </ul>
     </section>
     <section id="contact-section">
-        <h1>Let´s talk!</h1>
-        <h2>I´ll buy you coffee.</h2>
-        <form>
-            <!--Navn, epost, melding, send-->
+        <h1>
+            Let´s talk!<br>
+            I´ll bring coffee
+        </h1>
+        <form class="contact-form">
+            <ul>
+                <li id="name-input">
+                    <label id="name">Name:</label>
+                    <input type="text" for="name" required>
+                </li>
+                <li id="email-input">
+                    <label id="email">Email:</label>
+                    <input type="email" for="email" required>
+                </li>
+                <li id="text-box">
+                    <label id="message">Message:</label>
+                    <textarea for="message" required></textarea>
+                </li>
+                <button type='submit'>Send</button>
+            </ul>
         </form>
     </section>
-    <footer>
+    <!-- <footer> 
         <p></p>
-    </footer>
+    </footer> -->
 </body>
-</html>
+</html>  
