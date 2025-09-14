@@ -65,7 +65,6 @@ li {
 section {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     padding: 4rem;
 }
 
@@ -165,9 +164,10 @@ nav a {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 60% 20%;
-    background-color:var(--BACKGROUND-COLOR-TWO);
-    color: var(--TEXT-COLOR-ONE);
-    column-gap: 0.5rem;   
+    /* background-color:var(--BACKGROUND-COLOR-TWO);
+    color: var(--TEXT-COLOR-ONE); */
+    column-gap: 0.5rem;  
+    height: 100vh; 
 }
 
 .text-container {
@@ -184,29 +184,32 @@ nav a {
     white-space: wrap;
 }
 
-#about-section img {
+/* #about-section img {
     display: inline-grid;
     grid-row: 2;
     grid-column: 1;
     width: 100%; 
- }
+ } */
 
-/*skills-section*/
-.tools-container {
-    display: grid;
+.grid-container {
+    display: inline-grid;
+    grid-row: 2;
+    grid-column: 1;
+    width: 100%; 
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     justify-items: center;
+    align-content: center;
     max-height: 100%;
     grid-gap: 4rem;
 }
 
-.tools-container .item {
+.grid-container .item {
     height: 5rem;
     width: auto;
 }
 
-.tools-container img {
+.grid-container img {
     max-width: 100%;
     max-height: 100%;
 } 
@@ -217,9 +220,46 @@ nav a {
 }
 
 /*projects-section*/
+
 #projects-section {
-    background-color:var(--BACKGROUND-COLOR-TWO);
-    color: var(--TEXT-COLOR-ONE);
+    display: flex;
+    flex-direction: column;
+}
+.projects-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1 fr;
+    justify-items: center;
+    align-content: center;
+    max-height: 100%;
+    width: 100%; 
+    row-gap: 4rem;
+}
+   
+.project-item {
+    display: inline-grid;
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+.project-item h3{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.project-item p{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.project-item a{
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.project-item img{
+    height: 20rem;
+    grid-column: 1;
 }
 
 /*contact-section*/
