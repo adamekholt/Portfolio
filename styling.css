@@ -192,23 +192,16 @@ nav a {
  }
 
 /*skills-section*/
-#skills-section {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 20% 60% 20%;
-    column-gap: 0.5rem;   
-}
-
 .tools-container {
-    grid-column: 2;
-    grid-row: 2;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    gap: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
     max-height: 100%;
+    grid-gap: 4rem;
 }
 
-.tools-container div {
+.tools-container .item {
     height: 5rem;
     width: auto;
 }
