@@ -3,3 +3,8 @@ todo:
 - add img
 - add finished text.
 - add functionality and validation to contactform.
+
+
+
+Libraries
+- aos for animation in the projects section
