@@ -6,8 +6,10 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="styling.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -28,11 +30,13 @@
     <section id="landing-section"> 
         <img class="img-1" src="/images/Group 628.png" alt="illustration">
         <img class="img-2" src="/images/image.png" alt="self portrait">
-        <h1>
-            I´m Adam, your<br>
-            new Front-end <br>
-            developer
-        </h1> 
+        <div class="wrapper">
+            <h1>
+                I´m Adam, your<br>
+                new Front-end <br>
+                developer
+            </h1> 
+        </div>
     </section>
     <section id="about-section"> <!--HUSKHUSKHUSK skift section id til class(?)-->
         <!-- <img class="img-1" src="/images/465ba9f57a324d2fa1530c6db0e513af.jpg" alt="bildeinfo">   -->
@@ -75,49 +79,93 @@
             <p>Når jeg ikke sitter inne å jobber med misjonsarbeidet mitt (og studier), elsker jeg å være ute på tur. Jeg og familien min drar gjerne på turer i skog og mark, eller legger ut på roadtrips. Hjemme tilbringer jeg mye tid med den akustiske gitaren min og små trearbeidsprosjekter. Selv om jeg ikke lager store fruktboller enda, er jeg på vei dit, én skeiv teskje av gangen.</p>
         </div>
         </section>
-    <section id="projects-section">
+    <section class="projects-section">
         <h1>Projects</h1>
-        <ul>
-            <li class="project-container">
-                <div class="project-item">
-                    <img src="/images/465ba9f57a324d2fa1530c6db0e513af.jpg" alt="testbilde">
-                    <h3>Prosjektnavn</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis veritatis dolore, iusto suscipit deleniti, quidem in quas laudantium corrupti modi id nesciunt unde! Repellendus commodi cumque fuga error! Praesentium, quasi?</p>
-                    <a href="https://www.github.com/adamekholt" target="_blank">
-                        <i class="fa-brands fa-github fa-lg"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/adamekholt/" target="_blank">
-                        <i class="fa-brands fa-linkedin fa-lg"></i>
-                    </a>
-                </div>              
-            </li>
-            <li class="project-container">
-                <div class="project-item">
-                    <img src="/images/465ba9f57a324d2fa1530c6db0e513af.jpg" alt="testbilde">
-                    <h3>Prosjektnavn</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis veritatis dolore, iusto suscipit deleniti, quidem in quas laudantium corrupti modi id nesciunt unde! Repellendus commodi cumque fuga error! Praesentium, quasi?</p>
-                    <a href="https://www.github.com/adamekholt" target="_blank">
-                        <i class="fa-brands fa-github fa-lg"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/adamekholt/" target="_blank">
-                        <i class="fa-brands fa-linkedin fa-lg"></i>
-                    </a>
-                </div>              
-            </li>
-            <li class="project-container">
-                <div class="project-item">
-                    <img src="/images/465ba9f57a324d2fa1530c6db0e513af.jpg" alt="testbilde">
-                    <h3>Prosjektnavn</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis veritatis dolore, iusto suscipit deleniti, quidem in quas laudantium corrupti modi id nesciunt unde! Repellendus commodi cumque fuga error! Praesentium, quasi?</p>
-                    <a href="https://www.github.com/adamekholt" target="_blank">
-                        <i class="fa-brands fa-github fa-lg"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/adamekholt/" target="_blank">
-                        <i class="fa-brands fa-linkedin fa-lg"></i>
-                    </a>
-                </div>              
-            </li>
-        </ul>
+        <div class="scroll-container">
+            <div class="scroll-item" data-aos="zoom-in-right">
+                <!-- <pre> -->
+                    <div class="text-container">
+                        <h3>prosjektnavn</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut dolore asperiores suscipit nobis, reiciendis aspernatur ipsa recusandae consequuntur facilis repellat labore quas distinctio animi voluptatem iure eum dicta. Pariatur, repudiandae.</p> 
+                        <a href="https://www.github.com/adamekholt" target="_blank">
+                            <i class="fa-brands fa-github fa-lg"></i>
+                        </a>
+                    </div>
+                    <div class="image-container">
+                        <img class="img-1" src="/images/image.png" alt="illustration">
+                    </div>
+                    <!-- </pre> -->
+            </div>
+            <div class="scroll-item" data-aos="zoom-in-right">
+                <!-- <pre> -->
+                    <div class="text-container">
+                        <h3>prosjektnavn</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut dolore asperiores suscipit nobis, reiciendis aspernatur ipsa recusandae consequuntur facilis repellat labore quas distinctio animi voluptatem iure eum dicta. Pariatur, repudiandae.</p> 
+                        <a href="https://www.github.com/adamekholt" target="_blank">
+                            <i class="fa-brands fa-github fa-lg"></i>
+                        </a>
+                    </div>
+                    <div class="image-container">
+                        <img class="img-1" src="/images/image.png" alt="illustration">
+                    </div>
+                    <!-- </pre> -->
+            </div>
+            <div class="scroll-item" data-aos="zoom-in-right">
+                <!-- <pre> -->
+                    <div class="text-container">
+                        <h3>prosjektnavn</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut dolore asperiores suscipit nobis, reiciendis aspernatur ipsa recusandae consequuntur facilis repellat labore quas distinctio animi voluptatem iure eum dicta. Pariatur, repudiandae.</p> 
+                        <a href="https://www.github.com/adamekholt" target="_blank">
+                            <i class="fa-brands fa-github fa-lg"></i>
+                        </a>
+                    </div>
+                    <div class="image-container">
+                        <img class="img-1" src="/images/image.png" alt="illustration">
+                    </div>
+                    <!-- </pre> -->
+            </div>
+            <!-- <ul>
+                <li class="project-container">
+                    <div class="project-item">
+                        <img src="/images/465ba9f57a324d2fa1530c6db0e513af.jpg" alt="testbilde">
+                        <h3>Prosjektnavn</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis veritatis dolore, iusto suscipit deleniti, quidem in quas laudantium corrupti modi id nesciunt unde! Repellendus commodi cumque fuga error! Praesentium, quasi?</p>
+                        <a href="https://www.github.com/adamekholt" target="_blank">
+                            <i class="fa-brands fa-github fa-lg"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/adamekholt/" target="_blank">
+                            <i class="fa-brands fa-linkedin fa-lg"></i>
+                        </a>
+                    </div>              
+                </li>
+                <li class="project-container">
+                    <div class="project-item">
+                        <img src="/images/465ba9f57a324d2fa1530c6db0e513af.jpg" alt="testbilde">
+                        <h3>Prosjektnavn</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis veritatis dolore, iusto suscipit deleniti, quidem in quas laudantium corrupti modi id nesciunt unde! Repellendus commodi cumque fuga error! Praesentium, quasi?</p>
+                        <a href="https://www.github.com/adamekholt" target="_blank">
+                            <i class="fa-brands fa-github fa-lg"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/adamekholt/" target="_blank">
+                            <i class="fa-brands fa-linkedin fa-lg"></i>
+                        </a>
+                    </div>              
+                </li>
+                <li class="project-container">
+                    <div class="project-item">
+                        <img src="/images/465ba9f57a324d2fa1530c6db0e513af.jpg" alt="testbilde">
+                        <h3>Prosjektnavn</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis veritatis dolore, iusto suscipit deleniti, quidem in quas laudantium corrupti modi id nesciunt unde! Repellendus commodi cumque fuga error! Praesentium, quasi?</p>
+                        <a href="https://www.github.com/adamekholt" target="_blank">
+                            <i class="fa-brands fa-github fa-lg"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/adamekholt/" target="_blank">
+                            <i class="fa-brands fa-linkedin fa-lg"></i>
+                        </a>
+                    </div>              
+                </li>
+            </ul> -->
+        </div>
     </section>
     <section id="contact-section">
         <h1>
