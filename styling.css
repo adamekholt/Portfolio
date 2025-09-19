@@ -13,10 +13,13 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    column-gap: 10px;
     background-color: var(--BACKGROUND-COLOR-ONE);
     color: var(--TEXT-COLOR-TWO);
 } 
+
+header { /*LEGG TIL EN PENERE BOTTOM BORDER FOR EN MYKERE OVERGANG*/
+    margin-bottom: 3em;
+}
 
 a {
     color: inherit;
@@ -74,6 +77,7 @@ button {
     color: var(--TEXT-COLOR-ONE);
     border-style: none;
     align-items: center;
+    overflow: hidden;
 }
 
 input, textarea {
@@ -94,7 +98,7 @@ textarea {
 /*navbar*/
 nav {
     display: flex;
-    position: static; /*NB! vet ikke om jeg vil at den skal være der hele tiden eller ikke, vil helst ikke at den skal ha en egen bakgrunn. */
+    position: fixed; /*NB! vet ikke om jeg vil at den skal være der hele tiden eller ikke, vil helst ikke at den skal ha en egen bakgrunn. */
     align-items: center;
     background-color: var(--BACKGROUND-COLOR-ONE);
     color: var(--TEXT-COLOR-TWO);
@@ -107,14 +111,29 @@ nav {
     z-index: 2;
 }
 
-nav p {
+nav #home-button {
     margin-right: auto;
     padding: 10px;
+    cursor: default;
 }
 
 nav a {
     justify-items: flex-end; 
     padding: 0.5rem;
+    cursor: default;
+}
+
+nav a:hover {
+  color: rgb(255, 255, 255);
+}
+
+nav .fa-brands {
+    cursor: default;
+}
+
+
+nav .fa-brands:hover {
+  color: rgb(255, 255, 255);
 }
 
 /* -------Layout-----DISSE ER FERDIGE IKKE RØR------- */
@@ -135,10 +154,13 @@ section { /*parent*/
     align-items: center;
     max-width: 100%;
     height: 100%;
+    
 }
 
 .container-wrapper { /*cell*/
     display: grid;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     max-width: 100%;
@@ -175,6 +197,8 @@ section { /*parent*/
     display: grid;
     grid-template-columns: 20% auto 20%;
     grid-template-rows: 20% auto;
+    justify-content: center;
+    border: 4rem;
 }
 
 .landing-section h1{ 
@@ -184,7 +208,7 @@ section { /*parent*/
     text-align: center;
     max-width: 100%;
     max-height: 100%;
-    z-index: 1;
+    z-index: 2;
     white-space: nowrap;
 }
 
@@ -202,10 +226,8 @@ section { /*parent*/
     grid-column: 1;
     grid-row:  1;
     max-height: 500px;
+    padding-left: 4rem;
 }
-
-/* about-section*/
-
 
 /*Skills section*/
 
@@ -219,10 +241,12 @@ section { /*parent*/
     display: inherit;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    row-gap: 15em;
-    column-gap: 15em;
+    row-gap: 10em;
+    column-gap: 10em;
+    border: 3em;
 }
 .icon-wrapper img {
+    max-height: 7rem;
     height: 7rem;
     width: auto;
 }
@@ -275,7 +299,6 @@ section { /*parent*/
 .contact-form {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
 }
 
 .name-email {
@@ -307,7 +330,7 @@ section { /*parent*/
 
 @media (max-width: 1000px) {
     .landing.section {
-        grid-template-rows: 50% 50%;
+        grid-template-rows: 1fr;
     }
 
     .landing-section .img-1 {
@@ -326,7 +349,7 @@ section { /*parent*/
 }
 @media (max-width: 1200px) {
     .about-section {
-        grid-template-rows: 50% 50%;
+        grid-template-rows: 1fr;
         grid-template-columns: none;
     }
     .about-section .text-container {
@@ -334,5 +357,15 @@ section { /*parent*/
     }
     .about-section img {
         display: none;
+    }
+
+    .icon-wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .icon-wrapper img {
+        height: 3rem;
+        width: auto;
     }
 }
