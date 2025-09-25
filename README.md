@@ -8,3 +8,9 @@ todo:
 
 Libraries
 - aos for animation in the projects section
+
+
+Next session:
+- Get better pictures for projects
+- When clicking on picture make it pop like an overlay with a carousel 
+- In input fields in the contact section. Add more padding within. 
