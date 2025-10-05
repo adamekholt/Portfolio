@@ -45,9 +45,6 @@
                     <h1>who?</h1>
                     <p> Jeg er en 32 år gammel kar som er født på ny(vil jeg si), og lever sitt beste liv sammen med kone og hund på Nesodden. Siden jeg begynte å jobbe, har jeg jobbet med barn. Så, hva fikk meg inn i verden av webutvikling? Jeg giftet meg inn i en tech-familie, og det åpnet opp en helt ny måte å tenke på (jeg hadde nemlig levd litt under en stein en stund). Jeg har lenge tenkt at dersom jeg ønsker å gjøre en forskjell, må jeg være der menneskene er, og skape noe som kan bidra til ekte menneskelig samhandling. Nettopp derfor har «teknologirevolusjonen» skremt meg litt, fordi den kan bidra til at vi blir mindre tilstedeværende og mer distanserte fra hverandre som mennesker.</p><br>
                     <p>Derfor har jeg startet på en ny misjon, med et mål om å lage verdifulle verktøy som lar oss beholde ferdighetene våre og ikke mister det menneskelige underveis. Tenker jeg vil si at det gjør at selvom jeg ikke er med på å gjøre en forskjell, så er jeg med på å gjøre forskjellen positiv!</p><br>
-                    <!-- <p>Akkurat nå jobber jeg med et prosjekt hvor ideen min er å lage en kartapplikasjon som kombinerer de digitale funksjonene vi er vant til, men samtidig hjelper folk å lære å lese kart og navigere i norsk natur, uten internettdekning.</p><br>
-                    <p>Når jeg ikke sitter inne å jobber med misjonsarbeidet mitt (og studier), elsker jeg å være ute på tur. Jeg og familien min drar gjerne på turer i skog og mark, eller legger ut på roadtrips. Hjemme tilbringer jeg mye tid med den akustiske gitaren min og små trearbeidsprosjekter. Selv om jeg ikke lager store fruktboller enda, er jeg på vei dit, én skeiv teskje av gangen.</p> -->
-                </div>
                 <div class="left-container">
                         <img class="img-1" src="/images/image.png" alt="illustration">
                 </div>
@@ -120,19 +117,19 @@
                     <h1>Let's talk!</h1>
                 </div>
                 <div class="right-container">
-                    <form class="contact-form">
+                    <form class="contact-form" name="contact" method="POST" data-netlify="true">
                         <div class="name-email">
                             <div>
                                 <label for="name">Name:</label>
-                                <input type="text" id="name" required>
+                                <input type="text" id="name" name="name" required>
                             </div>
                             <div>
                                 <label for="email">Email:</label>
-                                <input type="email" id="email" required>
+                                <input type="email" id="email" name="email" required>
                             </div>
                         </div>
                         <label for="message">Message:</label>
-                        <textarea id="message" required></textarea>
+                        <textarea id="message" name="message" required></textarea>
                         <button type="submit">Send</button>
                     </form>
                 </div>
