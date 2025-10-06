@@ -3,10 +3,11 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    --BACKGROUND-COLOR-ONE: #000000;
-    --BACKGROUND-COLOR-TWO: #ab9e15;
-    --TEXT-COLOR-ONE: #000000;
-    --TEXT-COLOR-TWO: #ab9e15;
+    --BACKGROUND-COLOR-ONE: #3B4018;
+    --BACKGROUND-COLOR-TWO: #faf4d3;
+    --TEXT-COLOR-ONE: #3B4018;
+    --TEXT-COLOR-TWO: #faf4d3;
+    --CONTRAST: #F2E529;
 }
 
 body { 
@@ -29,33 +30,38 @@ a {
     font-family: "Inter", sans-serif;
     font-size: 16.108px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 800;
+    letter-spacing: 1px;
 }
 
 a:hover {
-    color: #fff;
+    color: var(--CONTRAST);
 }
 
 h1 {
-    font-family: "Anton", sans-serif;
+    font-family: "Bayon", sans-serif;
     font-size: 8em;
     font-style: normal;
+    font-weight: 800;
     text-transform: uppercase;
+    color: var(--CONTRAST);
+    letter-spacing: 1px;
 }
 
 h2 {
-    font-family: "Anton", sans-serif;
-    font-size: 100px;
+    font-family: "Bayon", sans-serif;
+    font-size: 3em;
     font-style: normal;
     font-weight: 400;
+    letter-spacing: 1px;
 }
 
-h3 {
+/* h3 {
     font-family: "Inter", sans-serif;
     font-size: 26.605px;
     font-style: normal;
     font-weight: 500;
-}
+} */
 
 p,
 label {
@@ -63,6 +69,8 @@ label {
     font-size: 16.24px;
     font-style: normal;
     font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.5em;
 }
 
 li {
@@ -76,12 +84,16 @@ li {
     cursor: default;
 }
 
+.fa-brands:hover {
+    color: var(--CONTRAST);
+}
+
 button {
     font-family: "Inter", sans-serif;
     font-size: 16.24px;
     font-style: normal;
     font-weight: 600;
-    background-color: var(--BACKGROUND-COLOR-TWO);
+    background-color: var(--CONTRAST);
     width: 30rem;
     height: 3rem;
     border-radius: 5px;
@@ -89,13 +101,22 @@ button {
     border-style: none;
     align-items: center;
     overflow: hidden;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: var(--BACKGROUND-COLOR-TWO);
 }
 
 input,
 textarea {
     border-style: none;
     border-radius: 5px;
-    color: var(--TEXT-COLOR-ONE);
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: var(--BACKGROUND-COLOR-TWO);
     margin-bottom: 2rem;
     margin-top: 0.5rem;
 }
@@ -187,7 +208,8 @@ section {
     grid-template-columns: 20%;
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: 20% 80%;
-    justify-content: center;
+    align-items: center;
+    justify-items: center;
     border: 4rem;
 }
 
@@ -205,6 +227,7 @@ section {
     align-self: flex-start;
     max-height: 50vh;
     margin: 1rem;
+    border-radius: 10px;
 }
 
 .landing-section h1 {
@@ -214,7 +237,8 @@ section {
     justify-content: center;
     z-index: 1;
     white-space: nowrap;
-    font-size: 6rem;
+    font-size: 7rem;
+    padding-bottom: 10rem;
 }
 
 .word {
@@ -295,13 +319,20 @@ section {
 }
 
 #image-container .img-1 {
-    max-width: 30%;
+    max-width: 50%;
 }
 
 .links {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 1em;
+}
+
+.links button {
+    padding: 0.7em;
+    width: auto;
+    height: auto;
 }
 
 .projects-section li {
@@ -312,6 +343,7 @@ section {
     display: flex;
     flex-direction: row;
 }
+
 
 /* contact */
 .contact-section .container-wrapper {
@@ -340,6 +372,7 @@ section {
 .contact-form button {
     width: 100%;
     justify-self: start;
+    border: solid var(--CONTRAST) 2px;
 }
 
 /* media */
@@ -354,6 +387,12 @@ section {
         align-self: center;
     }
 
+    h2 {
+        font-size: 8vw;
+        padding: 1rem;
+        align-self: center;
+    }
+
     .landing-section {
         display: flex;
         flex-direction: column;
@@ -361,7 +400,7 @@ section {
     }
 
     .landing-section h1 {
-        font-size: 7vw;
+        font-size: 10vw;
     }
 
     .landing-section .img-2 {
@@ -369,6 +408,7 @@ section {
         border-radius: 10px;
         margin-bottom: 2em;
         align-self: center;
+        border: var(--TEXT-COLOR-TWO) solid 2px;
     }
 
     .container,
@@ -378,10 +418,14 @@ section {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: start;
         height: auto;
         max-height: none;
-        text-align: center;
+        text-align: start;
+    }
+
+    .links {
+        align-self: center;
     }
 
     .about-section img,
