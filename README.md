@@ -1,16 +1,13 @@
 todo:
-- finish up grid layout. contactform and skills section. 
 - add img
 - add finished text.
-- add functionality and validation to contactform.
-
-
+- choose color palette
+- center the h1 in landingpage y axis
 
 Libraries
-- aos for animation in the projects section
+- aos for animation in the projects section(not using right now, maybe later on)
 
 
 Next session:
 - Get better pictures for projects
-- When clicking on picture make it pop like an overlay with a carousel 
 - In input fields in the contact section. Add more padding within. 
