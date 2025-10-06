@@ -96,7 +96,7 @@ button {
     background-color: var(--CONTRAST);
     width: 30rem;
     height: 3rem;
-    border-radius: 5px;
+    border-radius: 10px;
     color: var(--TEXT-COLOR-ONE);
     border-style: none;
     align-items: center;
@@ -111,7 +111,7 @@ button:hover {
 input,
 textarea {
     border-style: none;
-    border-radius: 5px;
+    border-radius: 10px;
     color: #000000;
     font-family: "Inter", sans-serif;
     font-size: 1em;
@@ -129,6 +129,10 @@ input {
 textarea {
     width: 30rem;
     height: 10rem;
+}
+
+img {
+    border-radius: 10px;
 }
 
 /* navbar */
