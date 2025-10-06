@@ -1,12 +1,12 @@
-/*basestyling*/
+/* basestyling */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     --BACKGROUND-COLOR-ONE: #000000;
     --BACKGROUND-COLOR-TWO: #ab9e15;
-    --TEXT-COLOR-ONE:#000000;
-    --TEXT-COLOR-TWO:#ab9e15;
+    --TEXT-COLOR-ONE: #000000;
+    --TEXT-COLOR-TWO: #ab9e15;
 }
 
 body { 
@@ -17,38 +17,48 @@ body {
     color: var(--TEXT-COLOR-TWO);
 } 
 
-header { /*LEGG TIL EN PENERE BOTTOM BORDER FOR EN MYKERE OVERGANG*/
+header { 
     margin-bottom: 3em;
 }
 
 a {
     color: inherit;
     text-decoration: none;
+    padding: 0.5rem;
+    cursor: default;
+    font-family: "Inter", sans-serif;
+    font-size: 16.108px;
+    font-style: normal;
+    font-weight: 500;
 }
 
-h1 { /*overskrift på hver side*/
+a:hover {
+    color: #fff;
+}
+
+h1 {
     font-family: "Anton", sans-serif;
-    font-size: clamp(1.8rem, 10vw, 10rem);   
+    font-size: 8em;
     font-style: normal;
-    font-weight: 400;
     text-transform: uppercase;
 }
 
-h2 { /*overskrift på hver side*/
+h2 {
     font-family: "Anton", sans-serif;
     font-size: 100px;
     font-style: normal;
     font-weight: 400;
 }
 
-h3 { /*overskrift til hvert prosjekt*/
+h3 {
     font-family: "Inter", sans-serif;
     font-size: 26.605px;
     font-style: normal;
     font-weight: 500;
 }
 
-p, label { /*brødtekst*/
+p,
+label {
     font-family: "Inter", sans-serif;
     font-size: 16.24px;
     font-style: normal;
@@ -63,6 +73,7 @@ li {
     color: var(--TEXT-COLOR-TWO);
     font-family: "Font Awesome 6 Brands";
     font-weight: 600;
+    cursor: default;
 }
 
 button {
@@ -80,14 +91,18 @@ button {
     overflow: hidden;
 }
 
-input, textarea {
+input,
+textarea {
     border-style: none;
-    width: 15rem;
-    height: 2rem;
     border-radius: 5px;
     color: var(--TEXT-COLOR-ONE);
     margin-bottom: 2rem;
     margin-top: 0.5rem;
+}
+
+input {
+    width: 15rem;
+    height: 2rem;
 }
 
 textarea {
@@ -95,17 +110,13 @@ textarea {
     height: 10rem;
 }
 
-/*navbar*/
+/* navbar */
 nav {
     display: flex;
-    position: fixed; /*NB! vet ikke om jeg vil at den skal være der hele tiden eller ikke, vil helst ikke at den skal ha en egen bakgrunn. */
+    position: fixed;
     align-items: center;
     background-color: var(--BACKGROUND-COLOR-ONE);
     color: var(--TEXT-COLOR-TWO);
-    font-family: "Inter", sans-serif;
-    font-size: 16.108px;
-    font-style: normal;
-    font-weight: 500;
     width: 100%;
     padding: 0.8rem;
     z-index: 2;
@@ -114,50 +125,30 @@ nav {
 nav #home-button {
     margin-right: auto;
     padding: 10px;
-    cursor: default;
 }
 
-nav a {
-    justify-items: flex-end; 
-    padding: 0.5rem;
-    cursor: default;
-}
-
-nav a:hover {
-  color: rgb(255, 255, 255);
-}
-
-nav .fa-brands {
-    cursor: default;
-}
-
-
-nav .fa-brands:hover {
-  color: rgb(255, 255, 255);
-}
-
-/* -------Layout-----DISSE ER FERDIGE IKKE RØR------- */
-section { /*parent*/
+/* layout */
+section {
     display: flex;
     flex-direction: column;
-    padding: 4rem;
-    min-height: 100vh;
-    max-height: 100vh;
-    max-width: 100%;
     justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 5rem;
+    box-sizing: border-box;
 }
 
-.container { /*table*/
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 100%;
     height: 100%;
-    
 }
 
-.container-wrapper { /*cell*/
+.container-wrapper {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -169,7 +160,7 @@ section { /*parent*/
 }
 
 .left-container,
-.right-container { /*minicell*/
+.right-container {
     display: grid;
     max-width: 100vw;
     max-height: 100vh;
@@ -179,60 +170,84 @@ section { /*parent*/
 .right-container {
     justify-content: center;
     align-items: center;
-    grid-template-columns: 2; 
+    grid-template-columns: 2;
     gap: 1rem;
 }
 
-.left-container{
+.left-container {
     justify-content: center;
     align-items: center;
-    grid-template-columns: 1; 
+    grid-template-columns: 1;
     gap: 1rem;
 }
 
-/* -------------------------- */
-
+/* landing */
 .landing-section {
     display: grid;
-    grid-template-columns: 20% auto 20%;
-    grid-template-rows: 20% auto;
+    grid-template-columns: 20%;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 20% 80%;
     justify-content: center;
     border: 4rem;
 }
 
-.landing-section h1{ 
-    grid-column: 2 ;
-    grid-row: 2;
-    text-align: center;
-    z-index: 1;
-    white-space: nowrap;
-}
-
 .landing-section .img-1 {
     grid-column: 3 / 4;
-    grid-row: 2; 
+    grid-row: 2;
     max-width: 100%;
-    align-self:flex-end;
+    align-self: flex-end;
     padding-bottom: 1rem;
 }
 
 .landing-section .img-2 {
-    align-self:flex-start;
     grid-column: 1;
-    grid-row:  1;
+    grid-row: 1;
+    align-self: flex-start;
     max-height: 50vh;
-margin: 1rem;
+    margin: 1rem;
 }
 
-/*About section*/
+.landing-section h1 {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+    justify-content: center;
+    z-index: 1;
+    white-space: nowrap;
+    font-size: 6rem;
+}
 
+.word {
+    display: inline-block;
+    position: relative;
+}
+
+.letter {
+    display: inline-block;
+    transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+    transform: rotateX(-90deg);
+}
+
+.letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* portrait */
 .portrait-1 {
     height: 70vh;
     max-width: auto;
 }
 
-/*Skills section*/
-
+/* skills */
 .skills-section .container-wrapper {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -248,52 +263,61 @@ margin: 1rem;
     border: 3em;
     padding: 1rem;
 }
+
 .icon-wrapper img {
     max-height: 7rem;
     height: 7rem;
     width: auto;
 }
 
-#black-icon{
-    background-color: #ffffff; 
+#black-icon {
+    background-color: #fff;
     max-height: 100%;
-    border: solid #ffffff;
+    border: solid #fff;
     border-radius: 10rem;
 }
 
-/*projects-section*/
-
+/* projects */
 .projects-section {
-    max-height: fit-content;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
 }
 
-#scroll-item {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 10% 80% 10%;
-    max-width: 100%;
-    height: 100vh;
-    column-gap: 1rem;
+.project-list {
+    height: 100%;
 }
 
 #image-container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    max-width: 100%;
 }
 
 #image-container .img-1 {
     max-width: 30%;
 }
 
-.contact-section .container-wrapper {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+.links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.contact-form {
+.projects-section li {
+    margin-bottom: 5rem;
+}
+
+.projects-section a {
+    display: flex;
+    flex-direction: row;
+}
+
+/* contact */
+.contact-section .container-wrapper {
     display: grid;
     grid-template-columns: 1fr;
+    align-items: center;
 }
 
 .name-email {
@@ -318,47 +342,60 @@ margin: 1rem;
     justify-self: start;
 }
 
-/*media*/
-@media (max-width: 1000px) { /*dette er ikke klart, burde vurdere færre linker eller en hamburgermeny*/
+/* media */
+@media (max-width: 1000px) {
     nav a {
         display: none;
     }
 
-}
-
-@media (max-width: 1000px) {
-    .landing.section {
-        grid-template-rows: 1fr;
+    h1 {
+        font-size: 10vw;
+        padding: 1rem;
+        align-self: center;
     }
 
-    .landing-section .img-1 {
-        display: none;
+    .landing-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
-    
+
     .landing-section h1 {
-        justify-items: center;
-    }    
+        font-size: 7vw;
+    }
 
     .landing-section .img-2 {
-        display: none;
+        display: inherit;
+        border-radius: 10px;
+        margin-bottom: 2em;
+        align-self: center;
     }
-}
-@media (max-width: 1000px) {
-    .about-section {
-        grid-template-rows: 1fr;
-        grid-template-columns: none;
-    }
-    /* .about-section .right-container {
-        grid-row-start: ;
-    } */
-    /* .about-section img {
-        display: none;
-    } */
 
-    .icon-wrapper {
+    .container,
+    .container-wrapper,
+    .left-container,
+    .right-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        max-height: none;
+        text-align: center;
+    }
+
+    .about-section img,
+    .projects-section img,
+    .landing-section img {
+        display: none;
+    }
+
+    .skills-section .icon-wrapper {
+        display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        padding: 3rem;
+        gap: 4rem;
+        justify-items: center;
+        padding: 1rem;
     }
 
     .icon-wrapper img {
@@ -366,7 +403,13 @@ margin: 1rem;
         width: auto;
     }
 
-    #scroll-item {
-        padding: 3rem;
+    section {
+        padding: 1rem;
     }
+
+    .name-email {
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+
 }
