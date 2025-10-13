@@ -1,6 +1,9 @@
-todo:
-- add finished text.
-- center the h1 in landingpage y axis
+# Portfolio
 
-Libraries
-- aos for animation in the projects section(not using right now, maybe later on)
+## Description
+Practice repo where I built a portfolio page using **html**, **css** and **javascript**
+
+## Tech Stack
+- Html
+- Css
+- Javascript
